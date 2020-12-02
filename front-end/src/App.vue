@@ -15,6 +15,7 @@
   </div>
   <div class="footer">
     <router-link to="/creator">Submit a Character</router-link>
+    <a href="https://github.com/TheZealotAlmighty/260Creative4">GitHub Link</a>
   </div>
 </div>
 </template>
