@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/characters', {
 // Configure multer so that it will upload to '../front-end/public/images'
 const multer = require('multer')
 const upload = multer({
-  dest: '../front-end/public/images/',
+  dest: '/var/www/cr4.zealousgaming.co/images/',
   limits: {
     fileSize: 10000000
   }
@@ -117,4 +117,4 @@ app.put('/api/items/:id', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(42069, () => console.log('Server listening on port 42069!'));
