@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueSimpleAlert from "vue-simple-alert";
 import Home from '../views/Home.vue'
 import Creator from '../views/Creator.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueSimpleAlert)
 
 const routes = [{
     path: '/',

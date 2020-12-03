@@ -108,8 +108,10 @@ export default {
           creator: this.creator,
         });
         this.addItem = r2.data;
+        this.$alert("Your submission has been accepted.");
       } catch (error) {
         //console.log(error);
+        this.$alert("Your submission failed.");
       }
     },
     async getItems() {
@@ -130,9 +132,11 @@ export default {
         await axios.delete("/api/items/" + item._id);
         this.findItem = null;
         this.getItems();
+        this.$alert("Character deleted.  I hope that was yours.");
         return true;
       } catch (error) {
         //console.log(error);
+        this.$alert("Failed to delete the character.");
       }
     },
     async editItem(item) {
@@ -145,9 +149,11 @@ export default {
         });
         this.findItem = null;
         this.getItems();
+        this.$alert("Character information updated.  I hope that was your character.");
         return true;
       } catch (error) {
         //console.log(error);
+        this.$alert("Failed to update the character information.");
       }
     },
   },
